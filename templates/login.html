@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-dark text-center m-4 display-4 f">VNR Vignana Jyothi Institute of Engineering and Technology</h1>
+    <span class="m-5"> </span>
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <img class="d-block mx-auto w-100 ps-4" src="../static/imgs/lgnImg.png" alt="image">
+        </div>
+        <div class="col-md-8">
+            <span class="m-5"> </span>
+            <h1 class="text-dark text-center mt-6 display-5 w-100">Student Login</h1>
+            <form class=" d-block" method="POST" action="{{ url_for('login') }}">
+                <div class="m-5 w-50 d-block mx-auto">
+                    <label for="roll" class="text-dark mb-2"><h6>Roll Number</h6></label>
+                    <input  type="text" required class="form-control bg-transparent text-dark border-bottom border-dark border-0" autocomplete="false" id="roll" name="roll">
+                </div>
+                <div class="m-5 w-50 d-block mx-auto">
+                    <label for="pwd" class="text-dark mb-2"><h6>Password</h6></label>
+                    <input type="password" required class="form-control bg-transparent text-dark border-bottom border-dark border-0" autocomplete="false" id="pwd" name="pwd">
+                </div>
+                {% for msg in get_flashed_messages() %}
+                    <h5 class="text-danger text-center">{{ msg }}</h5>
+                {% endfor %}
+                <button type="submit" class="btn btn-outline-secondary d-block mx-auto my-5 w-50 p-3 rounded-pill"><b>Login</b></button>
+            </form>
+        </div>
+
+{% endblock %}

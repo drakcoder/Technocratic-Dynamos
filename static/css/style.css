@@ -1,0 +1,16 @@
+.bg-darker {
+    background-color: black;
+}
+input{
+    border: none;
+}
+.f{
+    font-weight: 400;
+}
+#of{
+    overflow:hidden;
+}
+body {
+    background-image: url(../imgs/bg.jpg);
+    background-size: 100%;
+}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1 class="display-5 text-center m-5">Welcome {{ user }}</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-success d-block mx-auto my-5 w-50 p-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Mark your Attendance
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade modal-dialog modal-dialog-centered" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Attendance</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-success">Your Attendance has been successfully marked</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="/" class="btn btn-secondary">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

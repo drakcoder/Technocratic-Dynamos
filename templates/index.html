@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-dark text-center m-4 display-4 f">VNR Vignana Jyothi Institute of Engineering and Technology</h1>
+  <div class="row mx-2 my-4">
+    <div class="col-md-6 col-sm-12">
+      <h2 class="text-dark text-center m-4 f">Attendance through Face Recognition</h2>
+      <img src="{{ url_for('video') }}" width="75%" class="mx-auto d-block mt-4 rounded border border-secondary bg-secondary p-1"/>
+    </div>
+    <div class="col-md-6 col-sm-12 text-center text-dark">
+      <h5 class="text-dark text-center m-4 display-5 f">Student Details</h5>
+      <span class="m-4"> </span>
+      <h2 class="mt-6">{{ user[1] }}</h2>
+      <h2>{{ user[0] }}</h2>
+      <h4 class="text-secondary">{{ user[2] }}</h4>
+      <h4 class="text-secondary">{{ user[3] }} Section</h4>
+      <a href="/status" class="btn btn-success mt-4 rounded-pill p-3 d-block">Go for marking your Attendance</a>
+      <a href="/" class="btn btn-success mt-4 rounded-pill p-3 d-block">Logout</a>
+    </div>
+  </div >
+{% endblock %}
